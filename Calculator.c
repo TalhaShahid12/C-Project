@@ -26,6 +26,7 @@ int main(){
 		 printf("4)Division\n");
 		 printf("5)Cheching the remainder\n");
 		 printf("6)Want table of this value\n");
+		 printf("7)Take Sqaure root of the given Number\n");
 		
 		 scanf("%d",&Choice1);
 		
@@ -57,21 +58,28 @@ int main(){
 			}else{
 				printf("Not cORRECT Option");
 			}
-	}else if(Choice1==6)
+	}else if(Choice1>=6 && Choice1<=7)
 	{
 			double OnlyNumber,Result,Table;
 			printf("Enter The number\n");
 			scanf("%lf",&OnlyNumber);
+			if(Choice1==6){
+			
 			for(Table=1;Table<=10; Table++){
 				Result=	OnlyNumber*Table;
 				printf("%.2lf*%.2lf=%.2lf\n",OnlyNumber,Table,Result);
 			}
-	
+		}
+		
+			else if(Choice1==7){
+				Result=sqrt(OnlyNumber);
+				printf("The Sqaure root of the number is=%.2lf\n",Result);
+			}
 	}
 	else{
 		printf("not valid");
 	}
-	printf("Do yo want to continue y or n");
+	printf("Do yo want to continue y or n\n");
 	scanf("%c",&Opt);
 	if(Opt=='n'){
 		Calculator=false;
